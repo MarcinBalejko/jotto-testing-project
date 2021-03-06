@@ -4,10 +4,10 @@ export const findByTestAttr = (wrapper, val) => {
   return wrapper.find(`[data-test="${val}"]`);
 };
 
-export const checkProps = (component, confirmingProps) => {
+export const checkProps = (component, conformingProps) => {
   const propError = checkPropTypes(
     component.propTypes,
-    confirmingProps,
+    conformingProps,
     "prop",
     component.name
   );
