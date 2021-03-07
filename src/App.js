@@ -2,6 +2,8 @@ import React from "react";
 import hookActions from "./actions/hookActions";
 import "./App.css";
 
+import Input from "./Input";
+
 // Reducer to update state
 function reducer(state, action) {
   switch (action.type) {
@@ -23,7 +25,11 @@ export function App() {
     hookActions.getSecretWord(setSecretWord);
   }, []);
 
-  return <div data-test="component-app"></div>;
+  return (
+    <div data-test="component-app">
+      <Input secretWord={state.secretWord} />
+    </div>
+  );
 }
 
 export default App;
